@@ -90,6 +90,7 @@ export class Products {
       .subscribe((product) => {
 
         this.products = product?.products?.content || [];
+        this.cd.detectChanges();
         
       });
   }

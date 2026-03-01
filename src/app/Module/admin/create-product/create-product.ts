@@ -71,7 +71,7 @@ export class CreateProduct implements OnInit {
           }
         });
       } else {
-        // RESET the form if we are adding a NEW product
+       
         this.isEditMode = false;
         this.productId = null;
         this.product = {
@@ -106,7 +106,7 @@ export class CreateProduct implements OnInit {
 
     if (this.isEditMode && this.productId) {
 
-      // ===== UPDATE PAYLOAD (Product.java structure) =====
+      // UPDATE PAYLOAD 
       const updatePayload: any = {
         id: this.product.id,
         title: this.product.title,
@@ -139,7 +139,7 @@ export class CreateProduct implements OnInit {
 
     } else {
 
-      // ===== CREATE PAYLOAD (CreateProductRequest structure) =====
+      // CREATE PAYLOAD
       const createPayload: any = {
         title: this.product.title,
         description: this.product.discription,

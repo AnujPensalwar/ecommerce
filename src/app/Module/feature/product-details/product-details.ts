@@ -17,6 +17,7 @@ import { Auth } from '../../auth/auth';
 import { MatIcon } from '@angular/material/icon';
 import { ReviewService } from '../../../State/Review/review.service';
 import { RatingService } from '../../../State/Rating/rating.service';
+import { BASE_API_URL } from '../../../config/api';
 
 
 
@@ -102,7 +103,7 @@ export class ProductDetails {
             .set("pageNumber", 0)
             .set("pageSize", 10);
 
-          this.http.get(`http://localhost:8080/api/products`, { headers, params })
+          this.http.get(`${BASE_API_URL}/api/products`, { headers, params })
             .subscribe((res: any) => {
               this.relatedProducts = res?.content?.filter(
                 (p: any) => p.id !== this.product.id

@@ -34,7 +34,7 @@ export class MainCarousel implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
 
-    // ✅ Get real width
+    // Get real width
     this.containerWidth =
       this.container.nativeElement.offsetWidth;
 
@@ -48,7 +48,6 @@ export class MainCarousel implements AfterViewInit, OnDestroy {
       this.currentSlide =
         (this.currentSlide + 1) % this.carouselData.length;
 
-      // ⭐ FORCE Angular repaint
       this.cd.detectChanges();
 
     }, 2500);

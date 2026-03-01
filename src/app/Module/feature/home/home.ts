@@ -3,6 +3,7 @@ import { MainCarousel } from './main-carousel/main-carousel';
 import { ProductSliderCart } from './product-slider-cart/product-slider-cart';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { BASE_API_URL } from '../../../config/api';
 
 @Component({
   selector: 'app-home',
@@ -34,7 +35,7 @@ export class Home {
 
   ngOnInit(){
 
-    this.http.get("http://localhost:8080/api/products/all")
+    this.http.get(`${BASE_API_URL}/api/products/all`)
     .subscribe((products: any)=>{
 
     

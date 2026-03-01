@@ -63,7 +63,7 @@ export class UserService{
     .get(`${this.apiUrl}/users/addresses`, { headers })
     .pipe(
       map((data: any) => {
-        console.log("USER ADDRESSES 👉", data);
+        console.log("USER ADDRESSES", data);
         return data;
       })
     );

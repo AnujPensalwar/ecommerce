@@ -37,7 +37,7 @@ export class Order {
 
     this.store.pipe(select(store => store.order))
       .subscribe((orderState) => {
-        console.log("ORDER STATE 👉", orderState);
+        console.log("ORDER STATE", orderState);
         this.orders = orderState.orders;
       });
   }
